@@ -30,17 +30,9 @@ requirements:
     - sdaxen_python_utilities >=0.1.4
 
 test:
-  requirements:
-    - nose
-    - mock
-    - mpi4py
-    - h5py
-    - standardiser
   imports:
     - e3fp
     - e3fp.config
-  commands:
-    - nosetests
 
 about:
   home: https://github.com/keiserlab/e3fp
