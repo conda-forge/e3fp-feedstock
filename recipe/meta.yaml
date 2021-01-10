@@ -40,7 +40,7 @@ test:
     - e3fp
     - e3fp.config
   commands:
-    - nosetests e3fp
+    - nosetests
 
 about:
   home: https://github.com/keiserlab/e3fp
