@@ -30,7 +30,7 @@ requirements:
     - sdaxen_python_utilities >=0.1.4
 
 test:
-  requires:
+  requirements:
     - nose
     - mock
     - mpi4py
