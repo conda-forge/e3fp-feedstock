@@ -1,5 +1,5 @@
 {% set name = "e3fp" %}
-{% set version = "1.2.3" %}
+{% set version = "1.2.4" %}
 
 
 package:
@@ -8,10 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/e3fp-{{ version }}.tar.gz
-  sha256: c7fd01869f0d23cb1950ebb23b36173f1566614a83205b497a6875c04cf5d9e1
+  sha256: 8d5aa5e338665441a58d51d9f679da481e7f7ed48f4df1ed03fb759ccb4d9326
 
 build:
-  number: 1
+  noarch: python
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,14 +21,15 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - pip
-    - python
+    - python >=3
   run:
-    - python
+    - python >=3
     - mmh3 >=2.3.1
     - numpy >=1.11.3
     - scipy >=0.18.0
     - rdkit >=2016.03.4
-    - sdaxen_python_utilities >=0.1.4
+    - sdaxen_python_utilities >=0.1.5
+    - smart_open >=1.8.3
 
 test:
   imports:
