@@ -20,14 +20,15 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - pip
-    - python
+    - python >=3
   run:
-    - python
+    - python >=3
     - mmh3 >=2.3.1
     - numpy >=1.11.3
     - scipy >=0.18.0
     - rdkit >=2016.03.4
-    - sdaxen_python_utilities >=0.1.4
+    - sdaxen_python_utilities >=0.1.5
+    - smart_open >=1.8.3
 
 test:
   imports:
