@@ -1,5 +1,5 @@
 {% set name = "e3fp" %}
-{% set version = "1.2.4" %}
+{% set version = "1.2.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/e3fp-{{ version }}.tar.gz
-  sha256: 8d5aa5e338665441a58d51d9f679da481e7f7ed48f4df1ed03fb759ccb4d9326
+  sha256: 980ec66879604afaecec28c4c3b0363d98accabf7718d53b8da64b630b66fbdf
 
 build:
   noarch: python
