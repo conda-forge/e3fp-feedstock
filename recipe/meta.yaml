@@ -15,8 +15,8 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - e3fp-conformer = e3fp.conformer.generate.main()
-    - e3fp-fingerprint = e3fp.fingerprint.generate.main()
+    - e3fp-conformer = e3fp.conformer.generate:main
+    - e3fp-fingerprint = e3fp.fingerprint.generate:main
 
 requirements:
   host:
