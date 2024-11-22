@@ -22,9 +22,9 @@ requirements:
   host:
     - flit-core
     - pip
-    - python >=3.9
+    - python {{ python_min }}
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - mmh3 >=2.3.1
     - numpy >=1.11.3
     - scipy >=0.18.0
@@ -33,6 +33,8 @@ requirements:
     - smart_open >=1.8.3
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - e3fp
     - e3fp.config
