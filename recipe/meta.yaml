@@ -1,5 +1,5 @@
 {% set name = "e3fp" %}
-{% set version = "1.2.5" %}
+{% set version = "1.2.6" %}
 
 
 package:
@@ -7,23 +7,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/e3fp-{{ version }}.tar.gz
-  sha256: 980ec66879604afaecec28c4c3b0363d98accabf7718d53b8da64b630b66fbdf
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/e3fp-{{ version }}.tar.gz
+  sha256: c3d754943b45065a6288f89c2034dfe211c7de145b14ef35109cbadc028187e4
 
 build:
   noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+    - e3fp-conformer = e3fp.conformer.generate:main
+    - e3fp-fingerprint = e3fp.fingerprint.generate:main
 
 requirements:
-  build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
   host:
+    - flit-core
     - pip
-    - python >=3
+    - python {{ python_min }}
   run:
-    - python >=3
+    - python >={{ python_min }}
     - mmh3 >=2.3.1
     - numpy >=1.11.3
     - scipy >=0.18.0
@@ -32,9 +33,14 @@ requirements:
     - smart_open >=1.8.3
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - e3fp
     - e3fp.config
+  commands:
+    - e3fp-conformer --help
+    - e3fp-fingerprint --help
 
 about:
   home: https://github.com/keiserlab/e3fp
