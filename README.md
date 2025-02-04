@@ -1,7 +1,7 @@
 About e3fp-feedstock
 ====================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/e3fp-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tmpae2ywcfu-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/keiserlab/e3fp
 
@@ -15,8 +15,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10535&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/e3fp-feedstock?branchName=main">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tmpae2ywcfu-feedstock?branchName=main">
       </a>
     </td>
   </tr>
